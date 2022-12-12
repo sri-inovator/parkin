@@ -6,8 +6,8 @@
 	So many people are parking their bikes on public roads, some people are parking in front of their house,
 	someone is parking in front of shops etc. These types of parking create so many problems for the public and also bike owners.
 	It creates street congestion , reduces road space to make traffic and also sometimes bikes have a theft problem.
-	Parkin is an idea that helps to connect the two peoples, the one who had a bike and another one who had a parking place in their home. 
-	It helps to reduce the street congestion and also reduce bike theft. 
+	Parkin is an idea that helps to connect the two peoples, the one who had a bike and another one who had a parking place 
+	in their home. It helps to reduce the street congestion and also reduce bike theft. 
 	
 
 Problem statement: https://docs.google.com/document/d/1SCcb6dETANG8o73m8Xd0lLhBVGJMxxNo/edit?usp=sharing&ouid=109203735634703092159&rtpof=true&sd=true
