@@ -1,9 +1,7 @@
 # parkin
  
 	Chennai is the third largest fleet of two wheelers in the country next only to New Delhi and Bangalore . Definitely each home had one bike, some houses had more than one bike. But all the people did not have a parking place .Very few people had a parking place in their house. Some people are parking in their company parking garage. So many people are parking their bikes on public roads, some people are parking in front of their house, someone is parking in front of shops etc.
-These types of parking create so many problems for the public and also bike owners. 
-
-It creates street congestion , reduces road space to make traffic and also sometimes bikes have a theft problem. Parkin is an idea that helps to connect the two peoples, the one who had a bike and another one who had a parking place in their home. It helps to reduce the street congestion and also reduce bike theft. 
+These types of parking create so many problems for the public and also bike owners. It creates street congestion , reduces road space to make traffic and also sometimes bikes have a theft problem. Parkin is an idea that helps to connect the two peoples, the one who had a bike and another one who had a parking place in their home. It helps to reduce the street congestion and also reduce bike theft. 
 
 Problem statement: https://docs.google.com/document/d/1G2xB54eHaGA_PdqP5YIKIyD8uc3VOyHwQnrq2MuI05s/edit?usp=sharing
 
