@@ -10,7 +10,7 @@
 	in their home. It helps to reduce the street congestion and also reduce bike theft. 
 	
 
-Problem statement: https://docs.google.com/document/d/1SCcb6dETANG8o73m8Xd0lLhBVGJMxxNo/edit?usp=sharing&ouid=109203735634703092159&rtpof=true&sd=true
+Problem statement: https://docs.google.com/document/d/1G2xB54eHaGA_PdqP5YIKIyD8uc3VOyHwQnrq2MuI05s/edit?usp=sharing
 
 Market Research: https://docs.google.com/document/d/11uBuHEo8nME65r9-bZ9YpCAI_7DBG2sO/edit?usp=sharing&ouid=109203735634703092159&rtpof=true&sd=true
 
