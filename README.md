@@ -17,3 +17,5 @@ Market Research: https://docs.google.com/document/d/11uBuHEo8nME65r9-bZ9YpCAI_7D
 Userflow: https://drive.google.com/file/d/1tts9J4YuNbFZApa9c8H_eNE49ea1t_-4/view?usp=sharing
 
 wireframe: https://drive.google.com/file/d/1jgLUqmFJ2m2ezPns2jHRwUtTwI9T8__7/view?usp=sharing
+
+Live server:https://sri-inovator.github.io/parkin/
