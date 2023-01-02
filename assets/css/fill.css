@@ -11,17 +11,11 @@ header{
     z-index: 2;
     color: white;
 }
-#link1{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    
-}
-#link1:hover{
-    color: #4b1df2;
-    background-color: white;
-    display: inline;
-    padding: 1.5px;   
+#logo{
+    height: 120px;
+    width: 160px;
+    background-color: #4b1df2;
+     margin: -10px 0 10px 20px; 
 }
 #nav{
     display: flex;
@@ -31,27 +25,26 @@ header{
     margin-right: 80px;
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 2px;
+    font-size: 24px;
 }
-#logo{
-    height: 120px;
-    width: 160px;
-    background-color: #4b1df2;
-     margin: -10px 0 10px 20px; 
+#nav a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 15px;
 }
-label{
-    font-size: 28px;
+#nav a:hover{
+    background-color: white;
+    color: #4b1df2;
+    display: inline;
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
-input{
-    height: 30px;
-    width: 200px;
-}
-#park1{
-    height: 250px;
-    width: 400px;
-}
-#park2{
-    height: 250px;
-    width: 400px;
+main{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1400px;
 }
 .images{
     display: flex;
@@ -59,46 +52,56 @@ input{
     justify-content: space-around;
     margin-left: 100px;
 }
-#head{
+#heading{
     font-size: 35px;
     text-align: center;
     margin-bottom: 40px;
+}
+#parking-image1{
+    height: 250px;
+    width: 400px;
+}
+#parking-image2{
+    height: 250px;
+    width: 400px;
+}
+.leaser_detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 250px;
+    height: 570px;
+    padding-right: 300px;
+    margin-bottom: 1px;
+    margin-left: 223px;
+    border-top-left-radius: 60px;
+    border: 3px solid #4b1df2;
+    background-color: #f2f2f2;
+}
+#name-number{
+    font-size: 30px;
+    margin-left: 60px;
+}
+form{
+    margin-left: 60px;
 }
 h3{
     font-size: 27px;
     position: absolute;
 }
-.request_detail{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 500px;
-    height: 770px;
-    padding-right: 300px;
-    margin-bottom: 12px;
-    margin-left: 223px;
-    border: 1px solid black;
-    transform: skewX(4deg);
-    background-color: #f2f2f2;
+label{
+    font-size: 28px;
 }
-form{
-    margin-left: 60px;
+input{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
 }
-#p_tag{
-    font-size: 30px;
-    margin-left: 60px;
-}
-main{
-    margin-top: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1400px;
-}
+
 button{
     text-decoration: none;
-    margin-left: 290px;
+    margin-left: 180px;
     color: #4218d9;
     border: 1px solid black;
     padding: 10px;
@@ -110,14 +113,14 @@ button:hover{
     background-color: #4b1df2;
 }
 footer{
-    margin-top: -12px;
+    margin-top: 80px;
     height: 150px;
     width: 1475px;
     background-color: #4218d9;
     color: white;
     
 }
-#contact{
+#footer-contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;
@@ -138,6 +141,6 @@ footer{
 }
 h6{
 position: absolute;
-top: 1000px;
+top: 1040px;
 left: 45%;
 }

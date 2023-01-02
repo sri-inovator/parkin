@@ -25,14 +25,17 @@ a{
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 2px;
 }
-#link1{
+#nav a{
+    text-decoration: none;
     color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
 #logo{
     height: 120px;
@@ -70,13 +73,13 @@ form{
     border-radius: 10px;
     background-color: #f2f2f2;
 }
-.nme{
+.label-data{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 680px;
 }
-.iput{
+.innput{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -113,7 +116,7 @@ footer{
     color: white;
     
 }
-#contact{
+#footer-contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;

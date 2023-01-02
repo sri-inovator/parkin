@@ -23,14 +23,17 @@ a{
     left: 42%;
     text-decoration: underline;
 }
-#link1{
+#nav a{
+    text-decoration: none;
     color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
 #nav{
     display: flex;
@@ -65,13 +68,13 @@ form{
     flex-direction: row;
     justify-content: space-evenly;
 }
-.nme{
+.label-data{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 680px;
 }
-.iput{
+.innput{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -94,9 +97,7 @@ button{
     height: 23px;
     margin-top: -13px;
 }
-/* #upload{
-    margin-top: -19px;
-} */
+
 #upload{
     margin-top: -3px;
 }
@@ -108,13 +109,9 @@ button{
 #pass ,#copass{
     width: 400px;
     height: 20px;
-    /* margin-top: 10px; */
+   
 } 
-/* #name ,#number ,#street ,#district ,#pass ,#copass{
-    width: 400px;
-    height: 20px;
-    margin-top: 10px;
-} */
+
 #door{
     width: 45px;
     height: 20px;
@@ -140,7 +137,7 @@ footer{
     color: white;
     
 }
-#contact{
+#footer-contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;
@@ -161,6 +158,6 @@ footer{
 }
 h6{
 position: absolute;
-top: 970px;
+top: 1020px;
 left: 45%;
 }

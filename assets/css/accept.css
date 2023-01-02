@@ -1,7 +1,6 @@
 body{
     font-size: 20px;
 }
-
 header{
 display:flex;
 justify-content: space-between;
@@ -23,7 +22,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 500px;
-margin-right: 80px;
+margin-right: -200px;
 font-family: 'Luckiest Guy', cursive;
 letter-spacing: 2px;
 }
@@ -33,18 +32,19 @@ width: 160px;
 background-color: #4b1df2;
  margin: -10px 0 10px 20px; 
 }
-a#link1{
-left: 410px;
-position: relative;
-color: white;
+#nav a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
-#thumb{
+#thumb-image{
     margin-left: 6%;
     height: 240px;
     animation-name: emoji;
@@ -78,25 +78,24 @@ footer{
     background-color: #4218d9;
     color: white;   
 }
-#contact{
+#footer_contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;
     margin-top: 5px;
-  }
-
-  #foot{
+}
+#foot{
     position: absolute;
     height: 100px;
     margin-left: 10px;
     margin-top: 20px;
-  }
+}
 #play{
     position:absolute;
     height: 35px;
     margin-left: 150px;
     margin-top: 50px;
-  }
+}
 h6{
 position: absolute;
 top: 835px;

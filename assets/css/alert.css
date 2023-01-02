@@ -13,24 +13,17 @@ header{
     right: 7.5px;
     z-index: 2;
 }
-#accep{
-    border: 1px solid black;
-    color: black;
-    padding: 10px;
+#nav a{
     text-decoration: none;
-}
-#link1{
     color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
-}
-a{
-    color: white;
-    text-decoration: none;
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
 #nav{
     display: flex;
@@ -47,6 +40,12 @@ a{
     background-color: #4b1df2;
      margin: -10px 0 10px 20px; 
 }
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
 #imag{
     height: 180px;
 }
@@ -54,7 +53,7 @@ a{
     height: 330px;
     width: 200px;
 }
-.profile_box{
+.present_box{
     border: 1px solid #4218d9;
     border-right: 50px solid #4218d9;
     border-left: 50px solid #4218d9;
@@ -68,7 +67,14 @@ a{
     align-items: center;
     background-color: white;
 }
-#head{
+#accept-html{
+    border: 1px solid black;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#histo{
     margin-top: 70px;
     position: absolute;
     font-size: 32px;
@@ -84,12 +90,13 @@ a{
     margin-left: 10px;
     background-color: white;
 }
-.main_container{
+.history_box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 footer{
     height: 200px;
     width: 1470px;
@@ -97,7 +104,7 @@ footer{
     color: white;
     
 }
-#contact{
+#footer_contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;
@@ -118,6 +125,6 @@ footer{
   }
 h6{
 position: absolute;
-top: 1510px;
+top: 1570px;
 left: 45%;
 }

@@ -14,21 +14,17 @@ header{
     z-index: 2;
     color: white;
 }
-#psw{
-    color: black;
-}
-a{
-    color: white;
+#nav a{
     text-decoration: none;
-}
-#link1{
     color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
 #nav{
     display: flex;
@@ -47,22 +43,12 @@ a{
     background-color: #4b1df2;
      margin: -10px 0 10px 20px; 
 }
-h2{
-    position: absolute;
-    top: 400px;
-    left: 130px;
-    color: black;
-    line-height: 40px;
-    font-family: 'Oswald', sans-serif;
-}
-.avatar{
+.avatar-img{
     height: 100px;
     width: 100px;
-}
-.avatar{
-    
     border-radius: 50px;
 }
+
 form{
     background-color: #ffffff;
     border: 1px solid black;
@@ -78,16 +64,34 @@ form{
     animation-name: dropin;
     animation-duration: 3s;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 @keyframes dropin{
     0%{transform: translateY(-350px); }
     50%{transform: translateY(0px);}
 }
-div.container1{
+#forgot-password{
+    color: black;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+h2{
+    position: absolute;
+    top: 400px;
+    left: 130px;
+    color: black;
+    line-height: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.container2{
     width: 300px;
     display: flex;
     flex-direction: row;

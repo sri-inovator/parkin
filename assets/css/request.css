@@ -16,13 +16,12 @@ header{
 a{
     color: white;
     text-decoration: none;
+    margin-left: 60px;
 }
 #nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 500px;
-    margin-right: 80px;
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 2px;
 }
@@ -32,21 +31,22 @@ a{
     background-color: #4b1df2;
      margin: -10px 0 10px 20px; 
 }
-a#link1{
-    left: 420px;
-    position: relative;
+#nav a{
+    text-decoration: none;
     color: white;
+    padding: 6px 15px;
 }
-#link1:hover{
-    color: #4b1df2;
+#nav a:hover{
     background-color: white;
+    color: #4b1df2;
     display: inline;
-    padding: 1.5px;   
+    padding: 6px 15px;  
+    border-radius: 5px;
 }
 #tick{
     height: 300px;
 }
-.main_container{
+.request{
     margin-top: 200px;
     margin-left: 40%;
     margin-bottom: 120px;
@@ -63,7 +63,7 @@ footer{
     background-color: #4218d9;
     color: white;  
 }
-#contact{
+#footer-contact{
     float: right;
     margin-right: 50px;
     font-size: 18px;
@@ -84,6 +84,6 @@ footer{
   }
 h6{
 position: absolute;
-top: 540px;
+top: 850px;
 left: 45%;
 }
