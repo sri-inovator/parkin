@@ -1,0 +1,22 @@
+{
+  "name": "parkin",
+  "version": "1.0.0",
+  "description": "[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_srikannan.esakkiappan__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_srikannan.esakkiappan__web_project)",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sri-inovator/parkin.git"
+  },
+  "author": "sri-inovator",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sri-inovator/parkin/issues"
+  },
+  "homepage": "https://github.com/sri-inovator/parkin#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
