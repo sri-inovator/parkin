@@ -16,8 +16,6 @@ header {
     background-color: #4b1df2;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 7.9px;
     z-index: 2;
     color: white;
 }
@@ -54,9 +52,14 @@ header {
 }
 
 .head_line {
-    position: absolute;
+    /* position: absolute;
     top: 35%;
-    left: 10%;
+    left: 10%; */
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     color: white;
 }
 
@@ -67,7 +70,7 @@ h1 {
 
 h2 {
     word-spacing: 2px;
-    margin-left: 29%;
+    /* margin-left: 29%; */
 
 }
 
@@ -81,7 +84,7 @@ h3 {
     border-radius: 20px;
     width: 80px;
     height: 30px;
-    margin-left: 49%;
+    /* margin-left: 49%; */
     padding: 5px 2px 15px 15px;
     background-color: black;
     font-size: 25px;
@@ -119,18 +122,22 @@ main {
     height: 600px;
     width: 1280px;
     position: absolute;
-    top: 17%;
+    margin-top: 10%;
+    /* top: 17%; */
 }
 
 .child1 {
     width: 950px;
     height: 300px;
-    position: absolute;
+    /* position: absolute;
     top: 110%;
-    left: 10%;
+    left: 10%; */
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 20%;
+    margin-left: 14%;
+
 }
 
 img#gif1 {
@@ -147,9 +154,10 @@ h4 {
 .child2 {
     width: 950px;
     height: 350px;
-    position: absolute;
+    /* position: absolute;
     top: 170%;
-    left: 10%;
+    left: 10%; */
+    margin-left: 14%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -163,13 +171,14 @@ img#gif2 {
 
 
 .faq {
-    position: absolute;
+    /* position: absolute;
     top: 222%;
-    left: 3.4%;
+    left: 3.4%; */
+    margin-left: 3%;
     border: 1px solid black;
     border-radius: 20px;
-    width: 1100px;
-    padding-left: 90px;
+    width: 84%;
+    padding-left: 9%;
     background-color: #7c6bf2;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
 }
@@ -185,7 +194,7 @@ img#gif2 {
     height: 5px;
     background-color: black;
     display: block;
-    width: 285px;
+    width: 39%;
 }
 
 #note {
@@ -195,15 +204,16 @@ img#gif2 {
 }
 
 #answer1 {
-    position: relative;
+    /* position: relative;
     top: 4px;
-    left: 20px;
+    left: 20px; */
 }
 
 #checkbox1 {
-    position: relative;
+    /* position: relative;
     left: -160px;
-    top: 1px;
+    top: 1px; */
+    margin-left: -15%;
     opacity: 1;
 
 }
@@ -246,16 +256,17 @@ img#gif2 {
 }
 
 label#q1 {
-    position: relative;
+    /* position: relative;
     top: 10px;
-    left: -19px;
+    left: -19px; */
     color: white;
 }
 
 #checkbox2 {
-    position: relative;
+    /* position: relative;
     top: 0px;
-    right: 160px;
+    right: 160px; */
+    margin-left: -15%;
     opacity: 1;
 }
 
@@ -275,22 +286,23 @@ label#q1 {
 }
 
 label#q2 {
-    position: relative;
+    /* position: relative;
     top: 10px;
-    right: 20px;
+    right: 20px; */
+    margin-left: -2%;
     color: white;
 }
 
 p#answer2 {
-    position: relative;
     margin-top: -10px;
     left: 25px;
 }
 
 input#checkbox3 {
-    position: relative;
+    /* position: relative;
     left: -350px;
-    top: 1px;
+    top: 1px; */
+    margin-left: -33%;
     opacity: 1;
 }
 
@@ -314,19 +326,20 @@ label#q3 {
     position: relative;
     right: 20px;
     top: -85px;
+    /* margin-left: -2%;
+    margin-top: -90%; */
     color: white;
 }
 
 p#answer3 {
-    position: relative;
-    top: 3px;
-    left: 30px;
+    margin-top: -4%;
 }
 
 input#checkbox4 {
-    position: relative;
+    /* position: relative;
     left: -340px;
-    top: -1px;
+    top: -1px; */
+    margin-left: -32%;
     opacity: 1;
 }
 
@@ -354,15 +367,14 @@ label#q4 {
 }
 
 p#answer4 {
-    position: relative;
-    top: -4px;
-    left: 30px;
+   margin-top: -8%;
 }
 
 input#checkbox5 {
-    position: relative;
+    /* position: relative;
     left: -230px;
-    top: 0px;
+    top: 0px; */
+    margin-left: -22%;
 
 }
 
@@ -393,15 +405,12 @@ label#q5 {
 }
 
 p#answer5 {
-    position: relative;
-    top: -5px;
-    left: 20px;
+   margin-top: -12%;
 }
 
 #mindmap_picture {
     height: 305px;
-    position: relative;
-    /* bottom: 1px; */
+    margin-top: 15%;
     width: 660px;
 }
 
@@ -437,22 +446,29 @@ img#car {
 
 .feedback {
     height: 100px;
-    position: absolute;
+    margin-top: 12%;
+    margin-left: 10%;
+    /* position: absolute;
     top: 430%;
-    left: 5%;
+    left: 5%; */
 }
 
 h5 {
-    position: absolute;
+    /* position: absolute;
     bottom: 310px;
-    left: 497px;
+    left: 497px; */
+    margin-top: -5%;
+    display: flex;
+    justify-content: center;
     font-size: 34px;
 }
 
 button {
-    position: relative;
+    /* position: relative;
     top: -16px;
-    right: 119px;
+    right: 119px; */
+    /* margin-bottom: 30%; */
+    margin-right: 10%;
     padding: 10px;
 }
 
@@ -483,8 +499,8 @@ textarea {
 }
 
 form.feedback {
-    height: 300px;
-    margin-left: 20px;
+    /* height: 300px;
+    margin-left: 20px; */
 }
 
 
@@ -492,44 +508,50 @@ form.feedback {
 
 
 
-footer {
-    height: 200px;
-    width: 1472px;
+footer{
+    height: 290px;
+    width: 1470px;
     background-color: #4218d9;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
-#footer_contact {
+/* #footer_contact {
     float: right;
     margin-right: 50px;
     font-size: 18px;
     margin-top: 5px;
-}
+} */
 
 #foot {
-    position: absolute;
+    /* position: absolute; */
     height: 100px;
-    margin-left: 10px;
-    margin-top: 20px;
+    /* margin-left: 10px;
+    margin-top: 20px; */
 }
 
 #play {
-    position: absolute;
+    /* position: absolute; */
     height: 35px;
-    margin-left: 150px;
-    margin-top: 50px;
+    /* margin-left: 150px;
+    margin-top: 50px; */
 }
 
 h6 {
-    position: absolute;
+    /* position: absolute;
     top: 3060px;
-    left: 5%;
+    left: 5%; */
+    /* margin-bottom: -1%; */
+    
+    
 }
 
 .credits {
-    float: right;
-    margin-top: 150px;
-    margin-right: -240px;
+    /* float: right; */
+    /* margin-top: 150px;
+    margin-right: -240px; */
     font-size: 18px;
     font-family: 'Oswald', sans-serif;
 }
@@ -552,4 +574,37 @@ h6 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: black;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 7%;
+        width: 100%;
+    }
+    #nav{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #road{
+        display: none;
+    }
+    img#car{
+        display: none;
+    }
+    footer{
+        margin-top: 50%;
+
+    }
 }

@@ -2,15 +2,16 @@ body{
     background-color: #f2f2f2;
     font-size: 20px;
 }
-header{
+header {
     display: flex;
     justify-content: space-between;
     height: 120px;
+    width: 1480px;
     background-color: #4b1df2;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 7.5px;
+    /* left: 0;
+    right: 7.9px; */
     z-index: 2;
     color: white;
 }
@@ -31,15 +32,17 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 500px;
-    margin-left: 10px;
-    position: relative;
-    left: 700px;
+    margin-right: 80px;
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 2px;
 }
-#logo{
-    height: 120px;
-    width: 160px;
+main{
+    display: flex;
+    flex-direction: row;
+}
+img#logo{
+    height: 105%;
+    width: 90%;
     background-color: #4b1df2;
      margin: -10px 0 10px 20px; 
 }
@@ -49,7 +52,7 @@ header{
     border-radius: 50px;
 }
 
-form{
+.formm{
     background-color: #ffffff;
     border: 1px solid black;
     border-radius: 25px;
@@ -76,10 +79,12 @@ a{
     text-decoration: none;
 }
 
-h2{
-    position: absolute;
+.content-leftside{
+    /* position: absolute;
     top: 400px;
-    left: 130px;
+    left: 130px; */
+    margin-top: 27%;
+    margin-left: 10%;
     color: black;
     line-height: 50px;
     font-family: 'Oswald', sans-serif;
@@ -124,4 +129,36 @@ button{
 #box{
     height: 40px;
     width: 200px;
+}
+
+
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 13%;
+        width: 100%;
+    }
+    #nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-leftside{
+        display: flex;
+        margin-top: 45%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .formm{
+        margin-top: 30%;
+    }
+    img#logo{
+        height: 100%;
+        width: 150%;
+    }
+    
+
 }
