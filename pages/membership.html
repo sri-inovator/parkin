@@ -28,14 +28,14 @@
         <div class="signup">
             <form action="profile1.html">
                 <div class="label-data">
-                    <label for="name" id="name1">Name</label>
-                    <label for="number" id="number1">Phone Number</label>
-                    <label for="Door_no" id="door1">Door Number</label>
-                    <label for="street" id="street1">Street</label>
-                    <label for="district" id="district">District</label>
-                    <label for="upload" id="upload">Upload parking picture</label>
-                    <label for="password" id="crtpass">Create password</label>
-                    <label for="confirm" id="conf">Confirm password</label>
+                    <label for="name" >Name</label>
+                    <label for="number" >Phone Number</label>
+                    <label for="Door_no" >Door Number</label>
+                    <label for="street" >Street</label>
+                    <label for="district" >District</label>
+                    <label for="upload" >Upload parking picture</label>
+                    <label for="password">Create password</label>
+                    <label for="confirm" >Confirm password</label>
                 </div>
                 <div class="innput">
                 <input type="text" id="name" name="name">
@@ -54,7 +54,7 @@
                
                 <input type="password" id="copass">
                 </div>
-                <button>Sign up</button>
+                <button onclick="login()">Sign up</button>
             </form>
         </div>
     </main>
@@ -72,5 +72,30 @@
         </div>
         <h6>COPYRIGHT ©2023 PARKIN.COM</h6>
     </footer>
+    <script>
+        // function login(){
+        //  const username = document.getElementById("name").value 
+        // const number =document.getElementById("number").value 
+        // const door =document.getElementById("door").value 
+        // const Feedback =document.getElementById("Feedback").value
+        // const dis =document.getElementById("district").value 
+        // const password =document.getElementById("pass").value 
+        // const password_ =document.getElementById("copass").value  
+        // let user_data= {
+        //     "username": username,
+        //     "number" : number,
+        //     "door" : door,
+        //     "feedback" : Feedback,
+        //     "district" : dis,
+        //     "password" : password,
+        //     "confirm password" : password_     
+        //   }
+        // let arr= localStorage.getItem("arr")
+        // ?JSON.parse(localStorage.getItem("arr")):
+        //  [];
+        // arr.push(user_data)
+        // localStorage.setItem("arr",JSON.stringify(arr))
+        // }
+    </script>
 </body>
 </html>

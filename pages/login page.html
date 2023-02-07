@@ -19,10 +19,12 @@
       <img id="logo" src="../assets/Images/lgo.png" alt="logo">
     </div>
     <!-- navigation links -->
-    <nav id="nav">
+    <nav class="nav_links" id="nav">
       <a href="membership.html">sign up</a>
       <a href="login page1.html">Tenant</a>
       <a href="about.html">About</a>
+      <a href="javascript:void(0);" class="icon">
+        <i class="fa fa-bars"></i>
     </nav>
   </header>
   <main>
@@ -33,25 +35,91 @@
       rent<br>your parking using Parkin.com</h2>
 
     <!-- login box -->
-    <form class="formm" action="profile1.html">
+    <form class="formm">
       <div class="imgcontainer">
         <img src="../assets/Images/img avatar.png" alt="Avatar" class="avatar-img">
       </div>
       <div class="container1">
         <label for="uname"><b>Username</b></label>
-        <input id="box" type="text" placeholder="Enter Username" name="uname" required><br><br>
+        <input id="username" type="text" placeholder="Enter Username" name="uname" required><br><br>
 
         <label for="psw"><b>Password</b></label>
-        <input id="box" type="password" placeholder="Enter Password" name="psw" required><br>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" required><br>
 
-        <button type="submit">Login</button><br>
+        <button type="submit" onclick="checkdata()">Login</button><br>
       </div>
       <div class="container2">
-        <a id="cancelbtn" href="../index.html">cancel</a>
+        <a id="cancelbtn" href="../index.html"> cancel</a>
         <div><a id="forgot-password" href="#">Forgot password?</a></div>
       </div>
     </form>
   </main>
+  <script>
+
+// function myFunction() {
+//   var x = document.getElementById("nav");
+//   if (x.className === "nav_links") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "nav_links";
+//   }
+// }
+
+// function checkdata(){
+
+// let name= document.getElementById("username").value
+//         let password= document.getElementById("password").value
+//         let user_data= {
+//             "user_name": name,
+//             "password" : password
+//         }
+//         let arr= localStorage.getItem("arr")
+//         ?JSON.parse(localStorage.getItem("arr")):
+//          [];
+//         arr.push(user_data)
+//         localStorage.setItem("arr",JSON.stringify(arr))
+//       } 
+   
+
+    // console.log(username);
+    // console.log(password);
+
+    // localStorage.setItem("username")
+    // document.getElementById("username").innerHTML = localStorage.getItem("username");
+    // localStorage.setItem("password")
+    // document.getElementById("password").innerHTML = localStorage.getItem("password")
+
+   
+function checkdata()
+{
+
+   const user_name = document.getElementById("username").value 
+    const pass_word =document.getElementById("password").value 
+
+    const User_details =JSON.parse(localStorage.getItem("arr"))
+
+let check;
+ User_details.find(element=>{
+
+       if(element["username"]==user_name && element["password"]==pass_word){
+
+        return check=1
+       }
+       else{
+          return check=0
+       }
+ })
+
+ if(check==1){
+  alert("Logged in")
+ }
+ else{
+  alert("Invalid")
+ }
+
+}
+
+   </script>
 </body>
 
 </html>

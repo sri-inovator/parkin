@@ -126,11 +126,17 @@ button{
     padding: 10px;
     border: 1px solid black;
 }
-#box{
+#username{
     height: 40px;
     width: 200px;
 }
-
+#password{
+    height: 40px;
+    width: 200px;
+}
+.navlinks .icon {
+    display: none;
+  }
 
 @media only screen and (max-width: 600px){
     header{
@@ -140,10 +146,26 @@ button{
         height: 13%;
         width: 100%;
     }
-    #nav{
+    /* #nav{
         display: flex;
         flex-direction: column;
-    }
+    } */
+    
+    .navlinks a.icon {
+        float: right;
+        display: block;
+      }
+      .navlinks.responsive {position: relative;}
+      .navlinks.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navlinks.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
     .content-leftside{
         display: flex;
         margin-top: 45%;

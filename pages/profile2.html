@@ -29,7 +29,7 @@
         <div class="profile">
             <img id="avatar_img" src="../assets/Images/avatar_img.png" alt="avatar_img">
             <div id="details">
-            <p>Name:&nbsp;&nbsp;Joel</p>
+            <p id="usrname">Name:&nbsp;&nbsp;Joel</p>
             <p>Address:&nbsp;&nbsp;No 20,Raniyammal street,Chennai</p>
             <p>Phone number:&nbsp;&nbsp;7843219844</p>
            
@@ -55,5 +55,12 @@
         </div>
         <h6>COPYRIGHT ©2023 PARKIN.COM</h6>
     </footer>
+    <script>
+         const username =localStorage.getItem("name");
+        console.log(name);
+
+        document.getElementById("usrname").innerText =name;
+        document.getElementById("usrname").value=name;
+    </script>
 </body>
 </html>
