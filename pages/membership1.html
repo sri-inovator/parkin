@@ -57,7 +57,7 @@
                
                 <input type="password" id="copass" >
                 </div>
-                <button onclick="checkdata()">Sign up</button>
+               <button  onclick="checkdata()"  >sign up</button>
             </form>
         </div>
     </main>
@@ -95,12 +95,28 @@
             "password" : password,
             "confirm password" : password_     
           }
+
         let arr= localStorage.getItem("arr")
         ?JSON.parse(localStorage.getItem("arr")):
          [];
         arr.push(user_data)
         localStorage.setItem("arr",JSON.stringify(arr))
+
+        // localStorage.setItem("name", username)
+        
+         
       } 
+    //   window.location.href= "profile2.html"
+
+
+//       function submit(){
+//       const username = document.getElementById("name").value;
+//     //   const pass = document.getElementById("pass").value;
+//       console.log(username);
+//     //   console.log(pass);
+//  localStorage.setItem("name", username)
+//  window.location.href= "profile2.html"
+//       }
        </script>
 </body>
 </html>

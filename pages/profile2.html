@@ -30,8 +30,8 @@
             <img id="avatar_img" src="../assets/Images/avatar_img.png" alt="avatar_img">
             <div id="details">
             <p id="usrname">Name:&nbsp;&nbsp;Joel</p>
-            <p>Address:&nbsp;&nbsp;No 20,Raniyammal street,Chennai</p>
-            <p>Phone number:&nbsp;&nbsp;7843219844</p>
+            <p id="adress">Address:&nbsp;&nbsp;No 20,Raniyammal street,Chennai</p>
+            <p id="numb">Phone number:&nbsp;&nbsp;7843219844</p>
            
             </div>
         </div>
@@ -56,11 +56,35 @@
         <h6>COPYRIGHT ©2023 PARKIN.COM</h6>
     </footer>
     <script>
-         const username =localStorage.getItem("name");
-        console.log(name);
+        //  const username =localStorage.getItem("name");
+        // console.log(name);
 
-        document.getElementById("usrname").innerText =name;
-        document.getElementById("usrname").value=name;
+        // document.getElementById("usrname").innerText =name;
+        // document.getElementById("usrname").value=name;
+
+        let details=JSON.parse(localStorage.getItem("profile_details"));
+        let arr=JSON.parse(localStorage.getItem("arr"));
+
+let res;
+        arr.find(element => {
+                if (element["username"] == details["username"] && element["password"] == details["password"] ) {
+                    return res=JSON.stringify(element);
+                }
+                else {
+                    return res=0;
+                }
+            });
+            if(res=JSON.parse(res)){
+                document.getElementById("usrname").innerText=res["username"] 
+                document.getElementById("adress").innerText=res["feedback"]
+                // document.getElementById("numb").innerText=res["number"]
+            }
+            else{
+                alert("error")
+            }
+        
+
+
     </script>
 </body>
 </html>
