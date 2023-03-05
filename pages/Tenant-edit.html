@@ -28,7 +28,7 @@
   <a href="#" id="bak-hom">Back to Home</a>
 </div>
 <div id="hed">
-  <h2>Tenant Registration</h2>
+  <h2>Tenant profile</h2>
 </div>
     <div class="container">
         <form >
@@ -123,46 +123,14 @@
           </div>
 
           <div class="row">
-            
-            <input id="sig" type="submit" value="sign up">
+            <button id="save">save</button>
+            <button id="del">Delete</button>
+            <!-- <input type="submit" value="sign up"> -->
           </div>
 
         </form>
         <script>
-          //  document.getElementById("sig").addEventListener("click",(e)=>{
-          //   console.log("clicked")
-          //   window.location.href="Tenant-log.html"
-          let form = document.querySelector("form")
-    form.addEventListener("submit", e => {
-      e.preventDefault()
-            // function checkdata(){
-
-const first_name = document.getElementById("fname").value 
-const  last_name= document.getElementById("lname").value 
-const email=document.getElementById("email").value
-const number_1 =document.getElementById("numb").value 
-const number_2 =document.getElementById("number").value 
-const Address =document.getElementById("subject").value
-const password_1 =document.getElementById("pass").value 
-const password_2 =document.getElementById("password").value  
-let user_data= {
-    "Firstname": first_name,
-    "Lastname": last_name,
-    "Email": email,
-    "phone_number" : number_1,
-    "phone_number1": number_2,
-    "Address": Address,
-    "password" : password_1,
-    "confirm_password" : password_2     
-  }
-
-let Tenant= localStorage.getItem("Tenant")
-?JSON.parse(localStorage.getItem("Tenant")):
- [];
-Tenant.push(user_data)
-localStorage.setItem("Tenant",JSON.stringify(Tenant))
-window.location.href="Tenant-log.html"
-          })
+       
         </script>
 </body>
 </html>

@@ -105,6 +105,35 @@ h2{
     background-color: #4b1df2;
   }
   
+  #save{
+    background-color: #4b1df2;
+    color: white;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 3%;
+    font-size: 20px;
+  }
+
+  #del{
+    background-color: #4b1df2;
+    color: white;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 25%;
+    font-size: 20px;
+  }
   .container {
     border-radius: 5px;
     background-color: #f2f2f2;

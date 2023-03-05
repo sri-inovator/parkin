@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="../assets/css/login-style.css">
 </head>
 <body>
-    <header>
-        <!-- header -->
-        <div class="header_logo">
-          <img id="logo" src="../assets/Images/lgo.png" alt="logo">
-        </div>
-        <nav id="nav">
+  <header>
+    <!-- header -->
+    <div class="header_logo">
+        <img id="head_logo" src="../assets/images/logo.png" alt="logo">
+    </div>
     
-            <!-- Navigation links -->
-            <a href="leaser-log.html">Leaser</a>
-            <a href="Tenant-log.html">Tenant</a>
-            <a href="about.html">About</a>
-        </nav>
-      
-    </header>
+    <nav id="nav">
+        <!-- Navigation links -->
+        <a href="../index.html">Home</a>
+        <a href="leaser-log.html">Leaser</a>
+        <a href="Tenant-log.html">Tenant</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
     <div id="hd"><br>
         <a href="#" id="bak-hom">Back to Home</a>
     </div>
@@ -39,11 +39,12 @@
           <img src="../assets/Images/tenant-log-imag.png" alt="Avatar" class="avatar-img">
         </div>
         <div class="container1">
-          <label for="uname"><b>Username</b></label>
-          <input id="username" type="text" placeholder="Enter Username" name="uname"  required><br><br>
+          <label for="uname"><b>Email</b></label>
+          <input id="email" type="Email" placeholder="Email" name="uname"  required><br><br>
   
           <label for="psw"><b>Password</b></label>
-          <input id="password" type="password" placeholder="Enter Password" name="psw" required><br>
+          <input id="password_" type="password" placeholder="Enter Password" name="psw" required 
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"><br>
   
           <button type="submit" >Login</button><br>
         </div>
@@ -59,6 +60,42 @@
         </h3>
         <a id="sign-up" href="Tenant-signup.html">Sign up</a>
     </div>
-    
+    <script>
+      let form = document.querySelector("form")
+    form.addEventListener("submit", e => {
+      e.preventDefault()
+      const email = document.getElementById("email").value
+      const password = document.getElementById("password_").value
+
+      const User_details = JSON.parse(localStorage.getItem("Tenant"))
+      let datas = {
+        "Email": email,
+        "password": password
+      }
+      let check;
+      User_details.find(element => {
+
+        if (element["Email"] == email && element["password"] == password) {
+          localStorage.setItem("Tenant_details", JSON.stringify(datas))
+
+          return check = 1
+        }
+        else {
+          return check = 0
+        }
+      })
+
+      if (check == 1) {
+        window.location.href = "tenant-profile.html"
+        
+
+      }
+      else {
+        alert("Invalid")
+      }
+
+    }
+    )
+    </script>
 </body>
 </html>

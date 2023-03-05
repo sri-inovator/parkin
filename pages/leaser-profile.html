@@ -32,6 +32,7 @@
                 <div class="image">
                     <img id="avatar_img" src="../assets/Images/Avatar.png" alt="image">
                 </div>
+                <button id="edi">Edit</button>
                 <div class="details">
                     <!-- Left side details -->
                     <div id="left-side">
@@ -44,11 +45,11 @@
                     </div>
                     <!-- right-side details -->
                     <div id="right-side">
-                        <p>&nbsp;Suresh</p>
+                        <p id="name">&nbsp;</p>
                         <br>
-                        <p id="address">&nbsp;No.25 raniyammal street<br> thanthai periyar nagar<br> Tharamani</p>
+                        <p id="address">&nbsp;</p>
                         <br>
-                        <p id="phone">&nbsp;9418728613</p>
+                        <p id="phone">&nbsp;</p>
                         <br>
                     </div>
                 </div>
@@ -69,6 +70,35 @@
         </div>
         <h6>COPYRIGHT ©2023 PARKIN.COM</h6>
     </footer>
+    <script>
+
+        // console.log("1")
+
+        let user= JSON.parse(localStorage.getItem("leaser"));
+
+        // let name = document.getElementById("name")
+        // let address = document.getElementById("address")
+        // let phone = document.getElementById("phone")
+
+
+        // let res=1;
+
+        // console.log(user)
+
+        // user.find(e=>{
+        //          if(res==1){
+        //             name.innerText=e["Firstname"]
+        //             address.innerText=e["Address"]
+        //             phone.innerText=e["phone_number"]
+
+        //          }
+        // })
+
+        document.getElementById("edi").addEventListener("click",(e)=>{
+            console.log("clicked")
+            window.location.href="leaser-edit.html"
+        })
+    </script>
 </body>
 
 </html>
