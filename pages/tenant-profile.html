@@ -5,83 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/tenant-profile.css">
-    <link rel="icon" href="../assets/Images/Logo.png">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="icon" href="../assets/images/Logo.png">
     <title>parkin</title>
 </head>
 <body>
-    <!-- header -->
     <header>
-        <div class="logo">
-            <img id="logo" src="../assets/Images/lgo.png" alt="logo">
+        <!-- header -->
+        <div class="header_logo">
+            <img id="head_logo" src="../assets/images/lgo.png" alt="logo">
         </div>
-        <!-- navigation links -->
+        <!-- <a id="h" href="#">Home</a> -->
         <nav id="nav">
-
-            <a href="tenant-choose-place.html">New Booking</a>
-            <a href="about.html">About</a>
-            <a href="../index.html">Back to home</a>
+            <!-- Navigation links -->
+            <a href="tenant-choose-place.html">Parking places</a>
+            <a href="Tenant-edit.html" id="edi">Edit profile</a>
+            <a href="../index.html">Log out</a>
         </nav>
-    </header>
+</header>
     <!-- main -->
     <main>
-        <div id="head">My profile</div>
-        <button id="edi" >Edit</button>
+        <!-- <div id="head">My profile</div>
+        <button id="edi" >Edit</button> -->
         <div class="profile">
-            <img id="avatar_img" src="../assets/Images/avatar_img.png" alt="avatar_img">
+            <img id="avatar_img" src="../assets/images/avatar_img.png" alt="avatar_img">
             
-            <div id="details">
-            <p>Name:&nbsp;&nbsp;<span id="input1"></span></p>
-            <p>Address:&nbsp;&nbsp;<span id="input2"></span></p>
-            <p>Phone number:&nbsp;&nbsp;<span id="input3"></span></p>
-           
+            <div class="details">
+            <h3 id="name">Name:&nbsp;&nbsp;<span id="input1"></span></h3>
+            <h3 id="phn">Phone number:&nbsp;&nbsp;<span id="input2"></span></h3>
+            <h3 id="addres">Address:&nbsp;&nbsp;<span id="input3"></span></h3>
             </div>
         </div>
-        <div id="bike-img">
-            <img id="bike1" src="../assets/Images/bik1..jpg" alt="bike">
-            <img id="bike2" src="../assets/Images/bik2..jpg" alt="bike1">
-        </div>
-        <br>
-        <br>
+        <!-- <div id="bike-img"> -->
+            <img id="bike1" src="../assets/images/bik1..jpg" alt="bike">
+          <!--  <img id="bike2" src="../assets/Images/bik2..jpg" alt="bike1"> -->
+        <!-- </div> -->
     </main>
-    <!-- footer -->
-    <footer>
-        <div class="follow">
-            <img id="foot" src="../assets/Images/lgo.png" alt="logo">
-            <img id="play" src="../assets/Images/playstore.webp" alt="playstore">
-        </div>
-        <div id="footer-contact">
-            <p>Keep in touch</p>
-            <p>Email id: parkin@gmail.com<br>
-            Contact no: 9867543412</p>
-        </div>
-        <h6>COPYRIGHT ©2023 PARKIN.COM</h6>
-    </footer>
-
-
     <script>
 
         console.log("1")
 
     
         let user= JSON.parse(localStorage.getItem("Tenant"));
+        let tenan_log=JSON.parse(localStorage.getItem("Tenant_details"))
         let input1 = document.getElementById("input1")
         let input2 = document.getElementById("input2")
         let input3 = document.getElementById("input3")
 
+        console.log(user);
+        console.log(tenan_log);
 
-        let res=1;
+        let res;
 
-        console.log(user)
 
         user.find(e=>{
-                 if(res==1){
-                    input1.innerText=e["Firstname"]
-                    input2.innerText=e["Address"]
-                    input3.innerText=e["phone_number"]
-
-                 }
+            if(e["Email"]==tenan_log["Email"]){
+                return res=e;
+            }
+                 
         })
+
+                    input1.innerText=res["Firstname"]
+                    input2.innerText=res["phone_number"]
+                    input3.innerText=res["Address"]
+
+        
         document.getElementById("edi").addEventListener("click",(e)=>{
             console.log("clicked")
             window.location.href="Tenant-edit.html"
@@ -89,4 +77,3 @@
 
     </script>
 </body>
-</html>

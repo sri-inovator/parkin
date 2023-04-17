@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/signup.css">
+  <link rel="stylesheet" href="../assets/css/signup-edit.css">
   <title>Document</title>
 </head>
 
@@ -14,23 +14,20 @@
   <header>
     <!-- header -->
     <div class="header_logo">
-      <img id="head_logo" src="../assets/Images/lgo.png" alt="logo">
+      <img id="head_logo" src="../assets/images/lgo.png" alt="logo">
     </div>
     <nav id="nav">
 
       <!-- Navigation links -->
-      <a href="leaser-log.html">Leaser</a>
-      <a href="Tenant-log.html">Tenant</a>
-      <a href="about.html">About</a>
+      <a href="leaser-profile.html" id="save">Save</a>
+      <a href="leaser-log.html" id="del">Delete</a>
+      <a href="../index.html">Log out</a>
 
     </nav>
 
   </header>
-  <div id="hd">
-    <a href="#" id="bak-hom">Back to Home</a>
-  </div>
   <div id="hed">
-    <h2>Leaser profile</h2>
+    <h2>Edit your profile Info</h2>
   </div>
   <div class="container">
     <form>
@@ -39,7 +36,7 @@
           <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." >
         </div>
       </div>
 
@@ -48,7 +45,7 @@
           <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
         </div>
       </div>
 
@@ -57,7 +54,7 @@
           <label for="email">Email</label>
         </div>
         <div class="col-75">
-          <input type="email" id="email" name="user_email">
+          <input type="email" id="email" name="user_email" disabled>
         </div>
       </div>
 
@@ -66,7 +63,7 @@
           <label for="name">Phone number</label>
         </div>
         <div class="col-75">
-          <input type="number" id="numb" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+          <input type="number" id="numb" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" >
         </div>
       </div>
 
@@ -75,7 +72,7 @@
           <label for="name">Another number</label>
         </div>
         <div class="col-75">
-          <input type="number" id="number" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+          <input type="number" id="number" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" >
         </div>
       </div>
 
@@ -84,7 +81,7 @@
           <label for="subject">Address</label>
         </div>
         <div class="col-75">
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:50px"></textarea>
+          <textarea id="subject" name="subject" placeholder="Write something.."  style="height:50px"></textarea>
         </div>
       </div>
 
@@ -93,7 +90,7 @@
           <label for="name">Password</label>
         </div>
         <div class="col-75">
-          <input type="password" id="pass" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+          <input type="password" id="pass" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
         </div>
       </div>
 
@@ -102,7 +99,7 @@
           <label for="name">Confirm Password</label>
         </div>
         <div class="col-75">
-          <input type="password" id="password" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+          <input type="password" id="password" name="numb" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" >
         </div>
       </div>
 
@@ -124,9 +121,9 @@
         </div>
       </div>
 
-      <div class="row">
-        <button id="save">save</button>
-        <button id="del">Delete</button>
+      <div  class="row">
+        <!-- <button id="save">save</button> -->
+        <!-- <button id="del">Delete</button> -->
         <!-- <input type="submit" value="sign up" > -->
       </div>
 
@@ -153,7 +150,7 @@
     })
     
       fname.value=check["firstname"]
-      lname.value=check["fastname"]
+      lname.value=check["lastname"]
       email.value=check["email"]
       numb.value=check["phone_number"]
       number.value=check["phone_number1"]
@@ -164,7 +161,7 @@
       document.getElementById("save").addEventListener("click",e=>{
         e.preventDefault();
         check["firstname"]=document.getElementById("fname").value;
-        check["fastname"]=document.getElementById("lname").value;
+        check["lastname"]=document.getElementById("lname").value;
         check["email"]=document.getElementById("email").value;
         check["phone_number"]=document.getElementById("numb").value;
         check["phone_number1"]=document.getElementById("number").value;
@@ -173,6 +170,7 @@
         check["confirm_password"]=document.getElementById("password").value;
 
         localStorage.setItem("leaser",JSON.stringify(data))
+        window.location.href = "leaser-profile.html"
     })
     document.getElementById("del").addEventListener("click",e=>{
         e.preventDefault();
@@ -180,6 +178,8 @@
         let num=data.indexOf(check) 
         data.splice(num,1)
         localStorage.setItem("leaser",JSON.stringify(data))
+        alert("It's ok to delete your account")
+        window.location.href = "leaser-log.html"
     })
 
     </script>

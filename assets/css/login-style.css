@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
     height: 130px;
     width: 1500px;
-    background-color: #0182ff;
+    background-color: #0d131f;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,8 +43,8 @@ header {
     top: 5.6%;
 } */
 #nav a:hover {
-    background-color: white;
-    color: black;
+    background-color: #0182ff;
+    color: white;
     display: inline;
     padding: 6px 15px;
     border-radius: 5px;
@@ -53,7 +53,7 @@ header {
 #head_logo {
     height: 90px;
     width: 120px;
-    background-color: #0182ff;
+    background-color: #0d131f;
     margin: 10px 0 10px 80px;
 }
 main{
@@ -62,6 +62,7 @@ main{
     margin-top: 1%;
     height: 40%;
     font-size: 20px;
+    background-image: url("../images/background2.jpg");
 }
 img#logo{
     height: 105%;
@@ -94,7 +95,7 @@ img#logo{
 a#sign-up{
     
     border-radius: 50%;
-    color: #4b1df2;
+    color: #0182ff;
     padding: 10px;
     margin-top: 40%;
     margin-left: 43%;
@@ -107,14 +108,13 @@ a#sign-up{
 }
 
 .formm{
-    background-color: #ffffff;
-    /* border: 1px solid black; */
+    background-color: #cecece;
+    border: 1px solid black;
     border-radius: 25px;
     height: 600px;
     width: 350px;
-    background-color: #f2f2f2;
     margin:150px auto;
-    margin-top: 7%;
+    margin-top: 9%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,8 +153,9 @@ div.container2{
 input{
     animation-name: slid;
     animation-duration: 2s;
-     border-width: 0px;
+    border-width: 0px;
     padding: 5px;
+    border: 1px solid black;
 }
 label{
     margin-top: 20px;
@@ -169,7 +170,7 @@ button{
     margin-left: 55px;
     animation-name: slide;
     animation-duration: 2s;
-    background-color: #4b1df2;
+    background-color: #0182ff;
     color: white;
     cursor: pointer;
 }

@@ -6,7 +6,7 @@ header{
     display: flex;
     justify-content: space-between;
     height: 120px;
-    background-color: #4b1df2;
+    background-color: #0d131f;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,8 +19,8 @@ header{
     padding: 6px 15px;
 }
 #nav a:hover{
-    background-color: white;
-    color: #4b1df2;
+    background-color: #0182ff;
+    color: white;
     display: inline;
     padding: 6px 15px;  
     border-radius: 5px;
@@ -37,10 +37,9 @@ header{
 #logo{
     height: 120px;
     width: 160px;
-    background-color: #4b1df2;
+    background-color: #0d131f;
      margin: -10px 0 10px 20px; 
 }
-
 
 a{
     color: white;
@@ -54,9 +53,9 @@ a{
     width: 200px;
 }
 .present_box{
-    border: 1px solid #4218d9;
-    border-right: 50px solid #4218d9;
-    border-left: 50px solid #4218d9;
+    
+    border-right: 50px solid #0182ff;
+    border-left: 50px solid #0182ff;
     margin-top: 200px;
     padding: 30px;
     margin-left: 215px;
@@ -83,9 +82,9 @@ a{
     margin-top: 150px;
     display: flex;
     justify-content: space-around;
-    border: 1px solid #4218d9;
-    border-top: 15px solid #4218d9;
-    border-bottom: 15px solid #4218d9;
+    /* border: 1px solid #4218d9; */
+    border-top: 15px solid #0d131f;
+    border-bottom: 15px solid #0d131f;
     width: 400px;
     margin-left: 10px;
     background-color: white;
@@ -97,34 +96,48 @@ a{
     justify-content: space-evenly;
 }
 
-footer{
-    height: 200px;
-    width: 1470px;
-    background-color: #4218d9;
-    color: white;
-    
+#foot{
+    margin-top: 10%;
+    background-color: #0d1e38;
+    padding: 3%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-#footer_contact{
+#flogo{
+    height: 60%;
+    width: 32%;
+}
+#contact{
+    margin-left: -35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#flt{
+    height: 60%;
+    width: 20%;
+}
+#ct{
     float: right;
-    margin-right: 50px;
-    font-size: 18px;
-    margin-top: 5px;
-  }
-
-  #foot{
-    position: absolute;
-    height: 100px;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-#play{
-    position:absolute;
-    height: 35px;
-    margin-left: 150px;
-    margin-top: 50px;
-  }
-h6{
-position: absolute;
-top: 1570px;
-left: 45%;
+    margin-left: -10%;
+}
+h5#ftc{
+    float: right;
+    margin-top: -29%;
+    margin-left: -50%;
+}
+h5#fc{
+    float:right;
+    margin-top: -47%;
+}
+#ftnav{
+    display: flex;
+    flex-direction: column;
+}
+#blk{
+    background-color: black;
+    border: 2px solid black;
+    padding: 2%;
 }

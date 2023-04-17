@@ -7,7 +7,7 @@ header {
     justify-content: space-between;
     height: 130px;
     width: 1500px;
-    background-color: #0182ff;
+    background-color: #0d131f;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,8 +32,8 @@ header {
     padding: 6px 15px;
 }
 #nav a:hover {
-    background-color: white;
-    color: black;
+    background-color: #0182ff;
+    color: white;
     display: inline;
     padding: 6px 15px;
     border-radius: 5px;
@@ -42,7 +42,7 @@ header {
 #head_logo {
     height: 90px;
     width: 120px;
-    background-color: #0182ff;
+    background-color: #0d131f;
     margin: 10px 0 10px 80px;
 }
 main{
