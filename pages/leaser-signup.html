@@ -36,7 +36,7 @@
           <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your name.." maxlength="30" pattern="[a-zA-Z0-9]+"
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." maxlength="30" pattern="[a-zA-Z]+"
             required>
         </div>
       </div>
@@ -46,7 +46,7 @@
           <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[a-zA-Z0-9]+" required>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[a-zA-Z]+" required>
         </div>
       </div>
 
@@ -112,42 +112,28 @@
       </div>
 
       <div class="row">
-        <div class="col-25">
-          <label for="name">Upload pics</label>
-        </div>
-        <div class="col-75">
-          <input type="file" id="number" name="numb">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="name">Upload docs</label>
-        </div>
-        <div class="col-75">
-          <input type="file" id="number" name="numb">
-        </div>
-      </div>
-
-      <div class="row">
 
         <input type="submit" value="sign up">
       </div>
 
     </form>
     <script>
+
+
       let form = document.querySelector("form")
       form.addEventListener("submit", e => {
         e.preventDefault()
 
-        const firstname = document.getElementById("fname").value
-        const lastname = document.getElementById("lname").value
-        const email = document.getElementById("email").value
-        const number1 = document.getElementById("numb").value
-        const number2 = document.getElementById("number").value
-        const address = document.getElementById("subject").value
-        const password1 = document.getElementById("pass").value
-        const password2 = document.getElementById("password").value
+        const firstname = document.getElementById("fname").value.trim()
+        const lastname = document.getElementById("lname").value.trim()
+        const email = document.getElementById("email").value.trim()
+        const number1 = document.getElementById("numb").value.trim()
+        const number2 = document.getElementById("number").value.trim()
+        const address = document.getElementById("subject").value.trim()
+        const password1 = document.getElementById("pass").value.trim()
+        const password2 = document.getElementById("password").value.trim()
+        
+        
 
         if (password1 != password2) {
           alert("Oops !! password and confirm password doesn't match.")

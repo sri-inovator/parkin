@@ -35,7 +35,7 @@
           <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." pattern="[a-zA-Z]+" required>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
           <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[a-zA-Z]+" required>
         </div>
       </div>
 
@@ -103,24 +103,6 @@
           <input type="password" id="password" name="numb"
             title="Password length must be atleast 8, and must contain atleast 1 uppercase, 1 lowercase character and 1 digit"
             pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="name">Upload pics</label>
-        </div>
-        <div class="col-75">
-          <input type="file" id="number" name="numb">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="name">Upload docs</label>
-        </div>
-        <div class="col-75">
-          <input type="file" id="number" name="numb">
         </div>
       </div>
 
