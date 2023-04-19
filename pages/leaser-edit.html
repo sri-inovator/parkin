@@ -200,7 +200,7 @@
 
         localStorage.setItem("leaser",JSON.stringify(data))
 
-        // displayimg();
+         preview1()
       })
 
 // upload land docs..........................................
@@ -212,6 +212,8 @@
         check["upload_docs"]=upload_docs;
 
         localStorage.setItem("leaser",JSON.stringify(data))
+
+        preview2()
       })
 
 // upload user image..........................................
@@ -223,40 +225,25 @@
         check["user_image"]=user_image;
 
         localStorage.setItem("leaser",JSON.stringify(data))
+
+        preview3()
       })
 
-      // let landpic = document.getElementById("display_image")
+      let landpic = document.getElementById("display_image")
+      function preview1() {
+        landpic.innerHTML = `<br><img src="${check["upload_image"]}" alt="Hv4a2Tv.jpg" border="0" height="255px" width="430px" >`                  
+      }
 
-      // let output_prev="";
+      let landdoc = document.getElementById("display_docs")
+      function preview2() {
+        landdoc.innerHTML = `<br><img src="${check["upload_docs"]}" alt="Hv4a2Tv.jpg" border="0" height="255px" width="430px" >`                  
+      }
 
-      // function displayimg(){
-      //   output_prev = "";
-
-      //   let a=0;
-
-      //   check.find((item,index) => {
-      //         ++a;
-
-      //   output_prev += ` <div class="img_item">
-      //   <div class="items_land"><p>land image ${a}<p> <span onclick="deletecer(${index})">&#128465</span></div>
-      //   <img src="${item.upload_image}"</div>`
-
-      //   landpic.innerHTML = output_prev;
-      //   });
-
-      // }
-
-      // function deleteimg(index) {
-
-      // check.splice(index, 1);
-
-      // // localStorage.setItem("certificate_list", JSON.stringify(certificate_list));
-
-      // alert("deleted succes");
-
-      // displayimg();
-
-
+      let userimg = document.getElementById("display_photo")
+      function preview3() {
+        userimg.innerHTML = `<br><img src="${check["user_image"]}" alt="Hv4a2Tv.jpg" border="0" height="255px" width="240px" >`                  
+      }
+      
 
 
     

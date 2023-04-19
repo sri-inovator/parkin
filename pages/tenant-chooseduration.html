@@ -32,7 +32,7 @@
         <!-- parking images -->
         <div class="images">
             <div id="heading">Parking place Image</div>
-            <img id="parking-image1" src="../assets/images/parking_place.jpg" alt="parking_place">
+            <div id="parking_image1"></div>
         </div>
             <!-- Leaser details -->
             <div class="leaser_detail">
@@ -111,9 +111,11 @@
 
     let first_name = document.getElementById("leaser_name")
     let phon_num = document.getElementById("leaser_number")
+    let parkin_img = document.getElementById("parking_image1")
 
     first_name.innerText = details["firstname"]
     phon_num.innerText = details["phone_number"]
+    parkin_img.innerHTML = `<img src="${details["upload_image"]}" alt="Hv4a2Tv.jpg" border="0" height="255px" width="430px" id="parking_image1">` 
     
 
 

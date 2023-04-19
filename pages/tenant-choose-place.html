@@ -92,10 +92,6 @@
             a.setAttribute("href", "tenant-chooseduration.html?name=" + lease[i]["firstname"]);
             console.log(a)
 
-            // div_list = document.createElement("div")
-            // div_list.setAttribute("class", "main_list")
-            
-            // main_lists.prepend(a)
 
             div_profile_box = document.createElement("div");
             div_profile_box.setAttribute("class", "profile_box");
@@ -105,11 +101,10 @@
             div_image.setAttribute("class", "image");
             div_profile_box.append(div_image);
 
-            // imag = document.createElement("img");
-            // imag.setAttribute("src", user["image"]["source"]);
-            // imag.setAttribute("alt", user["image"]["alt"]);
-            // imag.setAttribute("id", "imag");
-            // div_image.append(imag);
+            imag = document.createElement("img");
+            imag.setAttribute("id", "imag");
+            imag.setAttribute("src", lease[i]["upload_image"]);
+            div_image.append(imag);
 
             div_detail = document.createElement("div");
             div_detail.setAttribute("class", "detail");
@@ -131,11 +126,9 @@
             phon_num.innerText = lease[i]["phone_number"];
             div_detail.append(phon_num);
 
-            // document.querySelector("").prepend(a);
             main_lists.prepend(a)
         }
 
-        // search engine
 
         let search = document.getElementById("search");
         search.addEventListener("keyup", (e) => {
