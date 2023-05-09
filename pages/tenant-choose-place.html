@@ -17,8 +17,9 @@
     <!-- Navigation link -->
     <nav id="nav">
         <input id="search" type="search" placeholder=" Use your location to search">
-        <a id="log" href="../index.html">Log out</a>
         <button id="locat">Near by</button>
+        <a id="log" href="../index.html">Log out</a>
+
     </nav>
 
 </header>
@@ -32,17 +33,35 @@
 
     </main>
     <script>
+
+        const url = window.location.search;
+        const urlParams = new URLSearchParams(url)
+        let mail = urlParams.get('mail');
+
+
         let div_list;
         let div_profile_box;
+        let available;
         let div_image;
         let imag;
         let div_detail;
         let parag;
         let parag1;
 
+        let tenant = JSON.parse(localStorage.getItem("Tenant"));
+
+        let result;
+
+        tenant.find(e=>{
+            let Emai = e["Email"];
+            if(mail==Emai){
+                result = e;
+            }
+        })
+
 
         let lease = JSON.parse(localStorage.getItem("leaser"))
-        console.log(lease);
+
         let main_lists = document.querySelector(".main_list");
 
 
@@ -51,12 +70,13 @@
 
             let a = document.createElement("a");
             a.setAttribute("id", "link");
-            a.setAttribute("href", "tenant-chooseduration.html?name=" + lease[i]["firstname"]);
+            a.setAttribute("href", "tenant-chooseduration.html?name=" + lease[i]["firstname"]+"&Tenant="+ result["Email"] );
             console.log(a)
 
             div_profile_box = document.createElement("div");
             div_profile_box.setAttribute("class", "profile_box");
             a.append(div_profile_box);
+
 
             div_image = document.createElement("div");
             div_image.setAttribute("class", "image");
@@ -86,6 +106,9 @@
             phon_num.innerHTML = `<p>Phone number : ${lease[i]["phone_number"]}</p>`;
             div_detail.append(phon_num);
 
+            // available = document.createElement("p");
+            // available.setAttribute("id","")
+
             main_lists.prepend(a)
         }
 
@@ -112,13 +135,12 @@
 
             });
 
-
         })
 
         const locat = document.getElementById("locat")
         locat.addEventListener("click", function () {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.watchPosition(showPosition);
             } else {
                 alert("Geolocation is not supported by this browser.")
             }
@@ -126,17 +148,19 @@
 
                 let latitud = position.coords.latitude
                 let longitud = position.coords.longitude
+                let accur = position.coords.accuracy
                 console.log(latitud, longitud); // 13.0963045  80.2865916
+                console.log(Math.round(accur));
 
-                let near="";
+                let near = "";
                 for (let s = 0; s < lease.length; s++) {
                     let lat2 = lease[s]["Lattitude"];
                     let lon2 = lease[s]["Longitude"];
 
                     const distan_km = distance(latitud, longitud, lat2, lon2);
-                    console.log(distan_km);
 
-                    if (distan_km <= 1) {
+
+                    if (distan_km <= 5) {
                         console.log(lease[s]);
                         near += `<a id="link" href="tenant-chooseduration.html?name=${lease[s]["firstname"]}">
                             <div class="profile_box">
@@ -151,7 +175,7 @@
                             </div>
                                 </a>`
                         main_lists.innerHTML = near;
-                        console.log("sucess");
+                        console.log(distan_km);
                     }
                 }
             }
@@ -168,7 +192,7 @@
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             const d = R * c; // distance in km
             return d;
-            
+
         }
 
         function deg2rad(deg) {

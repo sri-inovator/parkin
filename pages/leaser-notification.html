@@ -92,24 +92,45 @@
     let hp;
     let hp1;
     let acp;
-    const tenan = JSON.parse(localStorage.getItem("Tenanat"))
+
+    const url = window.location.search;
+        const urlParams = new URLSearchParams(url)
+        let mail = urlParams.get('mail');
+
+    // const leaserr = JSON.parse(localStorage.getItem("leaser"))    
+    const tenan = JSON.parse(localStorage.getItem("Tenant_additional_det"))
     const leaser_log = JSON.parse(localStorage.getItem("profile_details"))
     const loger_mail = leaser_log["username"];
     console.log(loger_mail);
+    console.log(tenan);
 
-    console.log(leaser_log);
+    // console.log(leaser_log);
+
+    // let leaser_d;
+    // leaserr.find(le =>{
+    //     if(le["email"]==mail){
+    //         return leaser_d=le;
+    //     }
+    // })
+    // console.log(leaser_d);
     let res = 0;
 
+    // for(let j=0;j<4;j++){
     tenan.find(e => {
-        if (e["Request_person_email"] != loger_mail) {
+        e["request_receive_people"].find(j => {
 
-            main_box.style.display = "flex";
-        }
-        else {
-            return res = 1;
+            if (j["Request_person_email"] != mail) {
 
-        }
+                main_box.style.display = "flex";
+            }
+            else {
+                return res = 1;
+            }
+        })
     })
+    // }
+
+    // console.log(e);
     console.log(res);
     if (res == 1) {
         htag = document.createElement("h2");
@@ -154,17 +175,20 @@
         but.innerText = "Accept";
         detail.append(but)
     }
-    else{
+    else {
         req_feed = document.createElement("h2")
         req_feed.innerText = "You dont have any request !"
         main_box.append(req_feed)
     }
 
     let ans;
+
     tenan.find(e => {
-        if (e["Request_person_email"] == leaser_log["username"]) {
-            return ans = e;
-        }
+        e["request_receive_people"].find(m => {
+            if (m["Request_person_email"] == leaser_log["username"]) {
+                return ans = e;
+            }
+        })
     })
 
     console.log(ans);
@@ -206,14 +230,13 @@
     act = JSON.parse(localStorage.getItem("Accepted_Tenant")) ?? [];
 
     nava = document.createElement("a");
-    nava.setAttribute("id" , "nav");
+    nava.setAttribute("id", "nav");
     nava.setAttribute("href", "tenant-payment.html?mail=" + tenan_emil);
     console.log(nava);
 
     but.addEventListener("click", e => {
         e.preventDefault()
         // alert("hi")
-
 
         ans["Request status"] = "accepted";
         histo.style.display = "flex";
@@ -227,60 +250,74 @@
             To: tenan_emil,
             From: "parkinn2023.sri@gmail.com",
             Subject: "Accepting Request",
-            Body: `Hi ${ans["Firstname"]},<br>Congrats!, You Request was accepted. Lets ready to park and If you want to pay the parking amount via online click <a href=${nava}>this </a> link.`  
-            
-        }).then((message)=>{
+            Body: `Hi ${ans["Firstname"]},<br>Congrats!, You Request was accepted. Lets ready to park and If you want to pay the parking amount via online click <a href=${nava}>this </a> link.`
+
+        }).then((message) => {
             alert("Accepted sucessfully")
+            display_history();
             window.location.href = "leaser-accept.html"
         }
         )
-        
-    });
 
-    display_history()
+       
+  // but.setAttribute("disabled")
+
+    });
+    display_history();
+   
 
     function display_history() {
 
-        for (let i = 0; i < act.length; i++) {
+        for (let i = 1; i < act.length; i++) {
 
-            if (act[i]["Request_person_email"] == loger_mail) {
+            act.find(k => {
+                k["request_receive_people"].find(l => {
+                    if (l["Request_person_email"] == loger_mail) {
+                        history = document.createElement("div")
+                        history.setAttribute("class", "history")
+                        histo.append(history)
 
-                history = document.createElement("div")
-                history.setAttribute("class", "history")
-                histo.append(history)
+                        him = document.createElement("div")
+                        him.setAttribute("class", "image")
+                        history.append(him)
 
-                him = document.createElement("div")
-                him.setAttribute("class", "image")
-                history.append(him)
+                        hi = document.createElement("div")
+                        hi.setAttribute("id", "imag")
+                        hi.innerHTML = `<img src=${act[i]["upload_image"]} height=180px width=110px>`
+                        him.append(hi)
 
-                hi = document.createElement("div")
-                hi.setAttribute("id", "imag")
-                hi.innerHTML = `<img src=${act[i]["upload_image"]} height=180px width=110px>`
-                him.append(hi)
+                        det = document.createElement("div")
+                        det.setAttribute("class", "detail")
+                        history.append(det)
 
-                det = document.createElement("div")
-                det.setAttribute("class", "detail")
-                history.append(det)
+                        hp = document.createElement("p")
+                        hp.setAttribute("id", "hname")
+                        hp.innerHTML = `<p> ${act[i]["Firstname"]}</p>`
+                        det.append(hp)
 
-                hp = document.createElement("p")
-                hp.setAttribute("id", "hname")
-                hp.innerHTML = `<p> ${act[i]["Firstname"]}</p>`
-                det.append(hp)
+                        hp1 = document.createElement("p")
+                        hp1.setAttribute("id", "hnum")
+                        hp1.innerHTML = `<p> ${act[i]["phone_number"]} </p>`
+                        det.append(hp1)
 
-                hp1 = document.createElement("p")
-                hp1.setAttribute("id", "hnum")
-                hp1.innerHTML = `<p> ${act[i]["phone_number"]} </p>`
-                det.append(hp1)
+                        acp = document.createElement("p")
+                        acp.setAttribute("id", "acp")
+                        acp.innerHTML = `<p> ${z}`
+                        det.append(acp)
+                    }
+                })
+                
+            })
 
-                acp = document.createElement("p")
-                acp.setAttribute("id", "acp")
-                acp.innerHTML = `<p> ${z}`
-                det.append(acp)
-            }
+            
+
         }
 
 
     }
+
+
+    
 
 </script>
 
