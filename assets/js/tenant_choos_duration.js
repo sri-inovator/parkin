@@ -94,9 +94,6 @@ document.getElementById("ques").addEventListener("click", e => {
 
     if (date_diff === 0) {
         let out = Numtomin(min);
-        console.log(out);
-
-
 
         minut = convertH2M(out);
         console.log(minut);
@@ -108,8 +105,7 @@ document.getElementById("ques").addEventListener("click", e => {
     else if (date_diff > 0) {
         let out = Numtomin(mi);
         console.log(out);
-
-
+        
         minut = convertH2M(out);
         console.log(minut);
 
