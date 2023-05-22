@@ -34,8 +34,7 @@ let mail = urlParams.get('mail');
 const tenan = JSON.parse(localStorage.getItem("Tenant_additional_det"))
 const leaser_log = JSON.parse(localStorage.getItem("profile_details"))
 const lease = JSON.parse(localStorage.getItem("leaser_modify_data"))
-// const loger_mail = leaser_log["username"];
-// console.log(loger_mail);
+
 console.log(tenan);
 let res = 0;
 
@@ -61,7 +60,7 @@ console.log(res);
 if (res === 1) {
     htag = document.createElement("h2");
     htag.setAttribute("id", "headi");
-    htag.innerHTML = `New <br> Request:`;
+    htag.innerHTML = `New Request`;
     main_box.append(htag);
 
     image = document.createElement("div");
@@ -203,7 +202,7 @@ let accept = JSON.parse(localStorage.getItem("Accepted_Tenant"));
 accept.find(k => {
     let accept_leas = k["Accepted_leaser"];
     console.log(accept_leas);
-    if (mail === accept_leas) {
+    if (mail === accept_leas ) {
         history = document.createElement("div")
         history.setAttribute("class", "history")
         histo.append(history)

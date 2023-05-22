@@ -43,11 +43,20 @@ place.innerHTML = `<img src="${res["upload_image"]}" alt="parking_place" border=
 let user_img = document.getElementById("avatar_img");
 user_img.innerHTML = `<img src="${res["user_image"]}" alt="user_img" border="0" height=130px width=120px>`
 
-document.getElementById("edi").addEventListener("click", (e) => {
-    console.log("clicked")
-    window.location.href =  "leaser-edit.html?mail=" + res["email"]
+let edit = document.querySelectorAll(".edi")
+edit.forEach(s=>{
+    s.addEventListener("click", (e) => {
+        // console.log("clicked")
+        window.location.href =  "leaser-edit.html?mail=" + res["email"]
+    })
 })
 
-document.getElementById("requests").addEventListener("click", (r) =>{
+
+let requests=document.querySelectorAll(".requests")
+requests.forEach(e=>{
+e.addEventListener("click", (r) =>{
     window.location.href = "leaser-notification.html?mail=" + res["email"]
 })
+})
+
+

@@ -109,7 +109,9 @@ function preview3() {
     userimg.innerHTML = `<br><img src="${check["user_image"]}" alt="Hv4a2Tv.jpg" border="0" height="260px" width="200px" >`
 }
 
-document.getElementById("save").addEventListener("click", e => {
+let sav = document.querySelectorAll(".save");
+sav.forEach(s=>{
+  s.addEventListener("click", e => {
     e.preventDefault();
     check["Firstname"] = document.getElementById("fname").value;
     check["Lastname"] = document.getElementById("lname").value;
@@ -127,7 +129,11 @@ document.getElementById("save").addEventListener("click", e => {
     localStorage.setItem("Tenant", JSON.stringify(datas))
     window.location.href = "tenant-profile.html?mail=" + check["Email"]
 })
-document.getElementById("del").addEventListener("click", e => {
+})
+
+let delet = document.querySelectorAll(".del");
+delet.forEach(d=>{
+d.addEventListener("click", e => {
     e.preventDefault();
     console.log(check)
     let num = datas.indexOf(check)
@@ -135,4 +141,5 @@ document.getElementById("del").addEventListener("click", e => {
     alert("It's ok to delete your account")
     localStorage.setItem("Tenant", JSON.stringify(datas))
 
+})
 })

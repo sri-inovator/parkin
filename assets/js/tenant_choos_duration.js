@@ -81,8 +81,9 @@ document.getElementById("ques").addEventListener("click", e => {
     console.log(datdf);
 
     let stq = meridiancheck(star_time);
-
+    console.log(stq);
     let edq = meridiancheck(end_time);
+    console.log(edq);
 
 
     let min = (edq - stq);
@@ -103,6 +104,9 @@ document.getElementById("ques").addEventListener("click", e => {
 
     else if (date_diff > 0) {
         let out = Numtomin(mi);
+        console.log(out);
+
+        
 
         minut = convertH2M(out);
         console.log(minut);
@@ -147,6 +151,9 @@ function Numtomin(mi) {
     }
     else if (minu.length === 2) {
         minu = "00" + minu;
+    }
+    else if(minu.length === 1){
+        minu = "000" + minu;
     }
     var u = ":";
     var output = [minu.slice(0, 2), u, minu.slice(2)].join('');
@@ -218,14 +225,17 @@ document.querySelector("form").addEventListener("submit", l => {
             window.location.href = "tenant-request.html?mail=" + key["Email"];
         }
         )
-    window.location.href = "tenant-request.html?mail=" + key["Email"];
+    
     localStorage.setItem("Tenant_additional_det", JSON.stringify(tenant_details))
 
 
 })
 
-
-document.querySelector("#explo").addEventListener("click", (k) => {
-    k.preventDefault();
-    window.location.href = "tenant-choose-place.html?mail=" + ten;
+let explore = document.querySelectorAll(".explo");
+explore.forEach(e=>{
+    e.addEventListener("click", (k) => {
+        k.preventDefault();
+        window.location.href = "tenant-choose-place.html?mail=" + ten;
+    })
 })
+

@@ -122,33 +122,41 @@ function preview3() {
 
 
 
+let sav = document.querySelectorAll(".save");
+sav.forEach(s => {
+    s.addEventListener("click", e => {
+        e.preventDefault();
+        check["firstname"] = document.getElementById("fname").value;
+        check["lastname"] = document.getElementById("lname").value;
+        check["email"] = document.getElementById("email").value;
+        check["phone_number"] = document.getElementById("numb").value;
+        check["phone_number1"] = document.getElementById("number").value;
+        check["address"] = document.getElementById("subject").value;
+        check["location"] = document.getElementById("sub").value;
+        check["password"] = document.getElementById("pass").value;
+        check["confirm_password"] = document.getElementById("password").value;
+        check["upload_image"] = document.getElementById("land_img").value;
+        check["upload_docs"] = document.getElementById("land_docs").value;
+        check["user_image"] = document.getElementById("user_img").value;
 
-document.getElementById("save").addEventListener("click", e => {
-    e.preventDefault();
-    check["firstname"] = document.getElementById("fname").value;
-    check["lastname"] = document.getElementById("lname").value;
-    check["email"] = document.getElementById("email").value;
-    check["phone_number"] = document.getElementById("numb").value;
-    check["phone_number1"] = document.getElementById("number").value;
-    check["address"] = document.getElementById("subject").value;
-    check["location"] = document.getElementById("sub").value;
-    check["password"] = document.getElementById("pass").value;
-    check["confirm_password"] = document.getElementById("password").value;
-    check["upload_image"] = document.getElementById("land_img").value;
-    check["upload_docs"] = document.getElementById("land_docs").value;
-    check["user_image"] = document.getElementById("user_img").value;
-
-    localStorage.setItem("leaser", JSON.stringify(data))
-    localStorage.setItem("leaser_modify_data", JSON.stringify(data))
-    window.location.href = "leaser-profile.html?mail=" + check["email"]
+        localStorage.setItem("leaser", JSON.stringify(data))
+        localStorage.setItem("leaser_modify_data", JSON.stringify(data))
+        window.location.href = "leaser-profile.html?mail=" + check["email"]
+    })
 })
-document.getElementById("del").addEventListener("click", e => {
-    e.preventDefault();
-    console.log(check)
-    let num = data.indexOf(check)
-    data.splice(num, 1)
-    localStorage.setItem("leaser", JSON.stringify(data))
-    localStorage.setItem("leaser_modify_data", JSON.stringify(data))
-    confirm("It's ok to delete your account")
-    window.location.href = "leaser-log.html"
+
+
+let delet = document.querySelectorAll(".del");
+delet.forEach(d => {
+    d.addEventListener("click", e => {
+        e.preventDefault();
+        console.log(check)
+        let num = data.indexOf(check)
+        data.splice(num, 1)
+        localStorage.setItem("leaser", JSON.stringify(data))
+        localStorage.setItem("leaser_modify_data", JSON.stringify(data))
+        confirm("It's ok to delete your account")
+        window.location.href = "leaser-log.html"
+    })
+
 })
