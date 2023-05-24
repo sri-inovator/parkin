@@ -75,7 +75,9 @@
           <label for="name">Phone number</label>
         </div>
         <div class="col-75">
-          <input type="tel" id="numb" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+          <input name="somename" id="numb" placeholder="Enter your number" required title="please enter a valid phone number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="10" />
         </div>
       </div>
 
@@ -84,7 +86,9 @@
           <label for="name">Another number</label>
         </div>
         <div class="col-75">
-          <input type="tel" id="number" name="numb" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+          <input name="somename" id="number" placeholder="Enter your number" required title="please enter a valid phone number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="10" />
         </div>
       </div>
 
