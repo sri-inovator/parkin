@@ -248,7 +248,7 @@ locat.addEventListener("click", function () {
             
             if(distan_km <= 21){
                 console.log(distan_km); 
-                near += `<a id="link" href="tenant-chooseduration.html?name=${lease[s]["firstname"]}">
+                near += `<a id="link" href="tenant-chooseduration.html?name=${lease[s]["firstname"]}&Tenant=${result["Email"]}">
                     <div class="profile_box">
                       <div class="image">
                         <img id="imag" src="${lease[s]["upload_image"]}">
